@@ -27,6 +27,16 @@ useState처럼 사용도 가능하지만 간단한 상태관리는 useState를 �
 <div>CustomHook : 여러 컴포넌트에서 비슷한 기능을 공유할경우 커스텀 훅을 만들어 로직을 재사용 하는 것</div><br/>
 </p>
 
+<h1>컴포넌트 성능 최적화</h1>
+<p>
+<div>React.memo를 활용하여 불필요한 상황에 리렌더링 하지 않도록 한다.<br/>
+useState대신 useReducer를 사용</div>
+<div>개발자 도구를 활용한 성능 모니터링 : React DevTools 를 활용하여 측정, Profiler 탭에서 녹화 버튼을 누르고서 성능을 측정한다</div>
+<div>react-virtualized : 스크롤 되기 전에 보이지 않는 컴포넌트는 렌더링하지 않고 크기만 차지하게끔 하는 라이브러리<br/>
+npm install react-virtualized --save을 사용하여 다운<br/>
+vite의 경우 : **npm install https://github.com/samarai-project/react-virtualized-fixed.git 를 사용 하여 다운**</div>
+</p>
+
 <h1></h1>
 <p>
 <div></div>

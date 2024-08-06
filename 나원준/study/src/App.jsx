@@ -8,10 +8,27 @@ import './App.css'
 // import Callback from './test/Callback.jsx';
 // import Ref from './test/Ref.jsx';
 // import CustomSample from './test/CustomSample.jsx';
-import {useState, useRef, useCallback} from 'react';
+import {useReducer, useRef, useCallback} from 'react';
 import TodoTemplate from './Todo/TodoTemplate.jsx';
 import TodoInsert from './Todo/TodoInsert';
 import TodoList from './Todo/TodoList';
+
+function createTodos(){
+  const array = [];
+  for(let i=1;i<=2500;i++){
+    array.push({id: i, text: `할 일 ${i}`, checked: false});
+  }
+  return array;
+}
+
+function todoReducer(todos, action){
+  switch (action.type){
+    case 'INSERT': return todos.concat(action.todo);
+    case 'REMOVE' : return todos.filter(todo=> todo.id !==action.id);
+    case 'TOGGLE' : return todos.map(todo=> todo.id ===action.id ? {...todo, checked: !todo.checked} : todo);
+    default : return todos;
+  }
+}
 
 function App() {
   // Hooks 연습
@@ -30,10 +47,9 @@ function App() {
   //     <CustomSample />
   //   </>
   // );
-  const [todos, setTodos] =useState([
-]);
+  const [todos, dispatch] = useReducer(todoReducer, undefined, createTodos);
 
-  const nextId = useRef(1);
+  const nextId = useRef(2501);
   
   const onInsert = useCallback(text=>{
     const todo = {
@@ -41,17 +57,17 @@ function App() {
       text,
       checked: false,
     };
-    setTodos(todos.concat(todo));
+    dispatch({type: 'INSERT', todo})
     nextId.current+=1;
-  },[todos])
+  },[])
 
   const onRemove = useCallback((id)=>{
-    setTodos(todos.filter(todo=>todo.id !==id))
-  },[todos])
+    dispatch({type: 'REMOVE', id})
+  },[])
 
   const onToggle = useCallback(id=>{
-    setTodos(todos.map(todo=>todo.id===id?{...todo, checked: !todo.checked} : todo))
-  },[todos])
+    dispatch({type: 'TOGGLE', id})
+  },[])
 
   return (
           <TodoTemplate>

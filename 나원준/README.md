@@ -37,9 +37,15 @@ npm install react-virtualized --save을 사용하여 다운<br/>
 vite의 경우 : **npm install https://github.com/samarai-project/react-virtualized-fixed.git 를 사용 하여 다운**</div>
 </p>
 
+<h1>immer</h1>
+<p>
+<div>immer : 구조가 복잡한 객체 혹은 배열의 상태를 불변성을 유지하며 업데이트 할수있게 하는 라이브러리 <br/></div>
+<div>npm install immer use-immer로 다운후 사용</div>
+</p>
+
+
 <h1></h1>
 <p>
-<div></div>
 <div></div>
 <div></div>
 <div></div>

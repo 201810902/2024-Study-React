@@ -44,9 +44,21 @@ vite의 경우 : **npm install https://github.com/samarai-project/react-virtuali
 </p>
 
 
+<h1>리액트 라우터</h1>
+<p>
+<div>라우팅 : 사용자가 요청한 URL에 맞는 페이지를 보여주는 것<br/>
+리액트 라우터 : 리액트의 라우팅 관련 라이브러리, 컴포넌트 기반으로 라우팅 시스템 설정 가능<br/>
+npm install react-router-dom로 다운 받아서 사용</div><br/>
+<div>싱글 페이지 애플리케이션 : 서버에서 필요한 데이터만 비동기로 받아와서 동적으로 현재 화면에 다시 렌더링 하는 방식,  여러 페이지가 존재하지만 다수의 페이지를 표시하는데 있어 페이지 전환을 수행하지 않고 하나의 페이지인 것처럼 처리하는 기술</div><br/>
+<div>Route : 브라우저 주소 경로에 따라 원하는 컴포넌트를 보여줄때 사용<br/>
+Link : 다른페이지로 이동할때 사용<br/>
+URL 파라미터 : useParams라는 훅을 사용해 객체 형태로 조회한다 /라우트할 js파일명/:pram명 으로 링크를 만들수 있다</div><br/>
+<div>중첩 라우트 : <Outlet /> 을 사용하여 Outlet 컴포넌트가 사용된 자리에 중첩된 라우트가 보여지게 된다</div><br/>
+<div>공통 레이아웃 컴포넌트 : Head, Footer 같은 각 페이지 컴포넌트에서 재사용하는 컴포넌트</div><br/>
+<div>useNavigate : Link를 사용하지 않고 페이지를 이동할때 사용한다</div><br/>
+</p>
+
 <h1></h1>
 <p>
-<div></div>
-<div></div>
 <div></div>
 </p>

@@ -58,7 +58,25 @@ URL 파라미터 : useParams라는 훅을 사용해 객체 형태로 조회한�
 <div>useNavigate : Link를 사용하지 않고 페이지를 이동할때 사용한다</div><br/>
 </p>
 
-<h1></h1>
+<h1>axios</h1>
 <p>
-<div></div>
+<div>callback 함수 : 어떤 함수가 처리된 후 어떠한 작업을 하고싶을때 사용 (콜백안에 또 콜백을 넣을시 여러번 중첩되어 가독성이 안좋아짐)<br/>
+Promise :  콜백함수의 변형 <br/>
+async/await : Promise를 더 사용하기 쉽게 해주는 문법</div>
+<div>axios : HTTP 요청을 Promise 기반으로 처리한다.(async/await으로 바꿔서 처리할수 있다.)<br/>
+npm install axios 로 설치</div>
+<div>자주 활용하는 경우 usePromise를 활용해 커스텀 훅을 만들어서 호출해서 사용가능</div><br/>
+<div>axios GET : 단순 데이터 요청 시,파라미터 데이터를 포함시킬 때 (사용자 번호에 따라서 조회하기)<br/>
+axios POST : 데이터를 Message Body에 포함시켜서 보냄,GET 메서드에서 params를 사용한 경우와 비슷하게 수행<br/>
+axios DELETE : body가 비어있음, DB에서 저장되있는 내용을 삭제하는 목적으로 사용, 헤더에 너무 많은 데이터를 담을 수 없을 때는 두 번째 인자에 data 추가 가능<br/>
+axios PUT : DB에 저장되있는 내용을 갱신 및 수정하는 목적으로 사용, 서버 내부적으로 GET -> POST 과정을 거치기에 POST 메서드와 비슷한 형태<br/>
+</div>
 </p>
+
+<h1>Context API</h1>
+<p>
+<div>context API : 전역적으로 여러곳에서 사용되는 상태가 있고 컴포넌트 수가 많을때 사용</div>
+<div>Consumer : Context 안에있는 컴포넌트 Consumer 사이에 jsx 혹은 함수를 전달</div>
+<div>Provider : Context의 value를 변경 할수있다</div>
+</p>
+

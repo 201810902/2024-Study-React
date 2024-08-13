@@ -62,7 +62,7 @@ URL 파라미터 : useParams라는 훅을 사용해 객체 형태로 조회한�
 <p>
 <div>callback 함수 : 어떤 함수가 처리된 후 어떠한 작업을 하고싶을때 사용 (콜백안에 또 콜백을 넣을시 여러번 중첩되어 가독성이 안좋아짐)<br/>
 Promise :  콜백함수의 변형 <br/>
-async/await : Promise를 더 사용하기 쉽게 해주는 문법</div>
+async/await : Promise를 더 사용하기 쉽게 해주는 문법</div><br/>
 <div>axios : HTTP 요청을 Promise 기반으로 처리한다.(async/await으로 바꿔서 처리할수 있다.)<br/>
 npm install axios 로 설치</div>
 <div>자주 활용하는 경우 usePromise를 활용해 커스텀 훅을 만들어서 호출해서 사용가능</div><br/>
@@ -75,8 +75,36 @@ axios PUT : DB에 저장되있는 내용을 갱신 및 수정하는 목적으로
 
 <h1>Context API</h1>
 <p>
-<div>context API : 전역적으로 여러곳에서 사용되는 상태가 있고 컴포넌트 수가 많을때 사용</div>
-<div>Consumer : Context 안에있는 컴포넌트 Consumer 사이에 jsx 혹은 함수를 전달</div>
-<div>Provider : Context의 value를 변경 할수있다</div>
+<div>context API : 전역적으로 여러곳에서 사용되는 상태가 있고 컴포넌트 수가 많을때 사용</div><br/>
+<div>Consumer : Context 안에있는 컴포넌트 Consumer 사이에 jsx 혹은 함수를 전달</div><br/>
+<div>Provider : Context의 value를 변경 할수있다</div><br/>
 </p>
 
+<h1>리덕스</h1>
+<p>
+<div>리덕스 : 리액트 상태 관리 라이브러리로 읽기 전용 상태라 상태를 업데이트 할 때 새로운 객체를 생성해 주어야 한다.<br/>
+npm install redux react-redux로 설치 후 사용</div>
+<div>액션 : 상태에 변화가 필요할때 발생<br/>
+액션 객체는 type필드를 반드시 가지고 있어야 하며 이 값이 액션의 이름이라고 생각하면 된다.</div>
+<div>리듀서 : 액션을 만들어서 발생시키면 리듀서가 현재 상태와 전달받은 액션 객체를 파라미터로 받아온다.<br/>
+리듀서 함수는 순수한 함수여야 하며 이전 상태와 액션 객체를 파라미터로 받고 파라미터 외의 값에는 의존하면 안된다<br/>
+이전 상태는 건드리지 않고 변화를 준 새로운 상태 객체를 만들어서 반환해야한다<br/>
+똑같은 파라미터로 호출된 리듀서 함수는 언제나 같은 결과 값을 반환해야 한다</div><br/>
+<div>스토어 : 프로젝트에 리덕스를 적용하기 위해 만든다<br/>
+한 프로젝트에 하나의 스토어만 가질 수 있다</div><br/>
+<div>디스패치 : 스토어의 내장 함수중 하나로 액션을 발생시키는것 dispatch(action)의 형태로 호출</div><br/>
+<div>구독 : 스토어의 내장함수 중 하나로 상태가 업데이트 될때마다 호출된다</div><br/>
+<div>redux-actions : redux-action : 리듀스를 작성할때 쓰는 라이브러리<br/>
+npm install redux-actions로 설치</div><br/>
+<div>컨테이너 컴포넌트 : 리덕스 스토어와 연동된 컴포넌트 커넥트 함수를 사용해 연동한다<br/>
+커넥트로 만들었을시에는 해당 컴포넌트의 prop이 바뀌지 않으면 리렌더링이 방지되어 성능이 최적화 되지만 hook으로 만들었을시 성능 최적화를 위해서는 React.memo사용해야 한다.</div><br/>
+</p>
+
+<h1></h1>
+<p>
+<div></div><br/>
+<div></div><br/>
+<div></div><br/>
+<div></div><br/>
+<div></div><br/>
+</p>
